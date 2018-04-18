@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Permissiongs</string>
+    <string name="permlab_deadlyActivity">permlab_deadlyActivity</string>
+    <string name="permdesc_deadlyActivity">permdesc_deadlyActivity</string>
+</resources>
