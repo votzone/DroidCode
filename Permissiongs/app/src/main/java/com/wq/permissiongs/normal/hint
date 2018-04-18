@@ -1,0 +1,12 @@
+view all permissions
+adb shell pm list permissions -s
+
+grant all permissions for install
+adb shell install -g myapp.apk
+
+
+list permissions and state
+adb shell pm list permissions -d -g
+
+when API < 23 , grant or revoke permission in devices
+adb shell pm [grant|revoke] <permission-name> ...
