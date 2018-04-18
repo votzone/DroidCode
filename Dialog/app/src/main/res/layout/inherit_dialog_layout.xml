@@ -27,8 +27,8 @@
         android:id="@+id/ll_btn_2"
         android:layout_width="0dp"
         android:layout_weight="1"
-
         android:gravity="center"
+
         android:orientation="vertical"
         android:layout_height="150dp">
         <ImageView

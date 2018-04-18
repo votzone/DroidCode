@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
+    android:gravity="center"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.wq.dialog.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_my_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:onClick="showMydialog"
+        android:text="My Dialog"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_my_frag_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showFragDialog"
+        android:text="Fragment Dialog"/>
+
+    <Button
+        android:id="@+id/btn_alert_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showAlertDialog"
+        android:text="Alert Dialog"/>
+
+    <Button
+        android:id="@+id/btn_activity_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showActivityDialog"
+        android:text="Activity Dialog"/>
+
+    <Button
+        android:id="@+id/btn_other_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showPickers"
+        android:text="Pickers Dialog"/>
+
+
+
+</LinearLayout>

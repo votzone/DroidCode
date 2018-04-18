@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AletActivity"
+            android:label="@string/title_activity_alet" />
+        <activity
+            android:name=".DialogActivity"
+            android:theme="@style/AppTheme.Dialog.Notitle" />
+        <activity android:name=".PickersActivity"></activity>
     </application>
 
 </manifest>
