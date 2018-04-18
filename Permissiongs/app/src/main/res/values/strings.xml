@@ -2,4 +2,7 @@
     <string name="app_name">Permissiongs</string>
     <string name="permlab_deadlyActivity">permlab_deadlyActivity</string>
     <string name="permdesc_deadlyActivity">permdesc_deadlyActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

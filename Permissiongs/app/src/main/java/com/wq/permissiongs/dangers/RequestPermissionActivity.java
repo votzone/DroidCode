@@ -130,8 +130,10 @@ public class RequestPermissionActivity extends AppCompatActivity {
                     doNotPhoneState();
                 }
                 break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
