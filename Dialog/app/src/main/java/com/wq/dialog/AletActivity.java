@@ -11,8 +11,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+
+/**
+ * https://developer.android.google.cn/reference/android/app/AlertDialog.html
+ */
 public class AletActivity extends AppCompatActivity {
 
     @Override
@@ -147,6 +154,11 @@ public class AletActivity extends AppCompatActivity {
         final AlertDialog alertDialog = builder.create();
         alertDialog.setView(view2);
         alertDialog.show();
+    }
+
+    public void setCustomView(){
+//        FrameLayout fl = findViewById(android.R.id.custom);
+//        fl.addView(myView, new FrameLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT));
     }
 
 
