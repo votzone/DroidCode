@@ -3,18 +3,17 @@
     package="com.wq.permissiongs"
     android:sharedUserId="permissions.wq.com">
 
-    <permission
-        android:name="com.example.myapp.permission.DEADLY_ACTIVITY"
-        android:description="@string/permdesc_deadlyActivity"
-        android:label="@string/permlab_deadlyActivity"
-        android:permissionGroup="android.permission-group.COST_MONEY"
-        android:protectionLevel="dangerous" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <uses-permission android:name="hostcustpermission.wq.com.NormalPermission"/>
+    <uses-permission android:name="hostcustpermission.wq.com.DangerPermission"/>
 
     <application
         android:allowBackup="true"
@@ -31,7 +30,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".dangers.RequestPermissionActivity" />
-        <activity android:name=".fragment.FragmentActivity"></activity>
+        <activity android:name=".fragment.FragmentActivity" />
+        <activity android:name=".special.SpecialPermissionActivity" />
+        <activity android:name=".permissiongen.GenActivity" />
+        <activity android:name=".customize.CustPermissionActivity"></activity>
     </application>
 
 </manifest>

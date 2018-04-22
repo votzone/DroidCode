@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.wq.permissiongs.Manifest;
 import com.wq.permissiongs.R;
 
 

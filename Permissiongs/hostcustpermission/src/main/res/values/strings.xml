@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HostCustPermission</string>
+    <string name="normalPermission">normalPermission</string>
+    <string name="dangerPermission">dangerPermission</string>
+</resources>
