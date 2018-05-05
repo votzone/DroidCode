@@ -10,6 +10,7 @@
 
 qq：2117159782
 
+blog: [https://blog.votzone.com](https://blog.votzone.com/)
 
 
 ![联系我](assets/wxgzh.jpg)
