@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="anim" name="alpha" id="0x7f01000a" />
+    <public type="id" name="iv_img" id="0x7f070040" />
+    <public type="layout" name="activity_splash" id="0x7f09001c" />
+    <public type="mipmap" name="splash" id="0x7f0a0002" />
+</resources>
