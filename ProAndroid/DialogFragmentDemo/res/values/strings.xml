@@ -1,8 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Dialog</string>
-    <string name="title_activity_alet">AlertActivity</string>
-
-    <string name="help_text">
+<string name="help_text">
 \n
 1. You are reading the help text for this test
 program.
@@ -18,7 +16,7 @@ orientation using Ctrl+F11 to see if
 the dialogs work when the device is
 rotated.
 </string>
-    <string name="help1">
+<string name="help1">
 Here is more help text that could be displayed to the user in
 a dialog. When the user clicks the Close button, the previous
 dialog is re-displayed to them.
