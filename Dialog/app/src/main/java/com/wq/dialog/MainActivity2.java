@@ -74,7 +74,14 @@ implements OnDialogDoneListener
 
 	private void testPromptDialog()
     {
+		FragmentTransaction ft =
+				getFragmentManager().beginTransaction();
 
+		PromptDialogFragment pdf =
+				PromptDialogFragment.newInstance(
+						"Enter Something");
+
+		pdf.show(ft, PROMPT_DIALOG_TAG);
     }
 
 	private void testHelpDialog()

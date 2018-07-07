@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.wq.dialog.MainActivity;
 import com.wq.dialog.R;
 
 public class PromptDialogFragment 
@@ -111,6 +112,19 @@ implements View.OnClickListener
 		}
 		if (v.getId() == R.id.btn_help)
 		{
+			FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+
+			// in this case, we want to show the help text, but
+			// come back to the previous dialog when we're done
+			ft.addToBackStack(null);
+			//null represents no name for the back stack transaction
+
+			ft.remove(this);
+
+			HelpDialogFragment hdf =
+					HelpDialogFragment.newInstance(R.string.help1);
+			hdf.show(ft, "HELP_DIALOG_TAG");
 		    return;
 		}
 	}
