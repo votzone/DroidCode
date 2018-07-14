@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:theme="@style/ErrorText.Danger.Link"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minLines="5"
+        style="@style/ErrorText.Danger.Link"
+        android:text="Please visit www.androidbook.com for more help on using Android."
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvStyled"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:typeface="monospace"
+        android:text="@string/styledText" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text|textAutoCorrect|textAutoComplete|textMultiLine" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/italics" />
+
+    <TextView
+        android:id="@+id/errors"
+        style="@style/ErrorText"
+        android:text="There's trouble down at the mill." />
+
+    <TextView
+        android:id="@+id/danger"
+        style="@style/ErrorText.Danger"
+        android:text="SERIOUSLY! THERE'S TROUBLE DOWN AT THE MILL!!" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Button"
+        android:text="Go Theme"
+        android:onClick="click"/>
+</LinearLayout>
