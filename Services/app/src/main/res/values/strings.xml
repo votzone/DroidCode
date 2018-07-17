@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Services</string>
+    <string name="hello">Hello World, HttpGetDemo!</string>
+</resources>
