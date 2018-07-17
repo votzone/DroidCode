@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
@@ -53,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
+    TextView tvHello;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
         registerReceiver(homeReceiver, homeFilter);
 
+        tvHello = findViewById(R.id.tv_txt_hello);
+        StringBuilder sbuilder = new StringBuilder();
+        String action = getIntent().getAction();
+        if(action !=null){
+            sbuilder.append("action == ").append(action);
+        }else {
+            sbuilder.append("action == null");
+        }
+        sbuilder.append("\nisTaskRoot == ").append(isTaskRoot());
+        tvHello.setText(sbuilder.toString());
     }
 
     @Override
@@ -70,9 +84,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view){
-        Intent intent = new Intent(Settings.ACTION_HOME_SETTINGS);
-//        intent.setClassName("com.android.settings","com.android.settings.Settings$HomeSettingsActivity");
+
+        Intent intent = new Intent(this, MockHome.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setAction(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);//android.intent.category.LAUNCHER
         startActivity(intent);
+        finish();
+
+//        Intent intent = new Intent(Settings.ACTION_HOME_SETTINGS);
+//        intent.setClassName("com.android.settings","com.android.settings.Settings$HomeSettingsActivity");
+//        startActivity(intent);
 //        clearDefaultLauncher();
 //        Intent intentw = new Intent(Intent.ACTION_MAIN);
 //        intentw.addCategory(Intent.CATEGORY_HOME);

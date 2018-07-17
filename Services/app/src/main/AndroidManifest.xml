@@ -29,7 +29,17 @@
         <service
             android:name="com.androidbook.services.remote.RemotePrimService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="com.androidbook.services.remote.IPrimService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.androidbook.services.sessengerservice.MessengerService" >
+            <intent-filter>
+                <action android:name="com.androidbook.messengerservice.MessengerService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Services</string>
     <string name="hello">Hello World, HttpGetDemo!</string>
+    <string name="remote_service_started">Remote Service started</string>
+    <string name="remote_service_stopped">Remote Service stopped</string>
+    <string name="remote_service_label">Remote Service label</string>
 </resources>

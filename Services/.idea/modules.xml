@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Services.iml" filepath="$PROJECT_DIR$/Services.iml" />
+      <module fileurl="file://D:\ajm\DroidCode\Services\Services.iml" filepath="D:\ajm\DroidCode\Services\Services.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\ajm\DroidCode\Services\app\app.iml" filepath="D:\ajm\DroidCode\Services\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/clientapp/clientapp.iml" filepath="$PROJECT_DIR$/clientapp/clientapp.iml" />
+      <module fileurl="file://D:\ajm\DroidCode\Services\clientapp\clientapp.iml" filepath="D:\ajm\DroidCode\Services\clientapp\clientapp.iml" />
     </modules>
   </component>
 </project>

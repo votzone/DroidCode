@@ -10,12 +10,17 @@ public class RemotePrimService extends Service {
 
     private static final String TAG = "StockQuoteService";
 
-    class PrimService extends IPrimService.Stub{
+    class PrimService extends IAidlService.Stub{
 
         @Override
         public double getQuote(String ticker) throws RemoteException {
             Log.v(TAG, "getQuote() called for " + ticker);
             return 20.0;
+        }
+
+        @Override
+        public String get2Quote(String ticker, Person requester) throws RemoteException {
+            return "Hello "+requester.getName()+"! Quote for "+ticker+" is 20.0";
         }
     }
 
