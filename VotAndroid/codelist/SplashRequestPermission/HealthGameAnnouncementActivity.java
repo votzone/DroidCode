@@ -1,5 +1,6 @@
-package com.google.transform;
+package com.jsdw.huochaiZZXX.huawei;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -21,7 +22,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.unity3d.player.UnityPlayerNativeActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -63,7 +63,7 @@ public class HealthGameAnnouncementActivity extends Activity {
     private boolean lastOk = false;
     public void toNextActivity(){
         if(permissionOk && lastOk) {
-            Intent intent = new Intent(this, UnityPlayerNativeActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.setAction(Intent.ACTION_MAIN);
             intent.addCategory(Intent.CATEGORY_LAUNCHER);
@@ -172,21 +172,28 @@ public class HealthGameAnnouncementActivity extends Activity {
         }
     }
 
+    private boolean getPermissionsFromxml = false;
+
     /***
      * 获取manifest文件中声明的所有权限
      * @return
      */
     public String[] myPermissions(){
-        PackageManager pm = getPackageManager();
-        PackageInfo pi;
+        if(getPermissionsFromxml) {
+            PackageManager pm = getPackageManager();
+            PackageInfo pi;
 
-        try {
-            pi = pm.getPackageInfo(getPackageName(), PackageManager.GET_PERMISSIONS);
-            String[] permissions = pi.requestedPermissions;
-            return permissions;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return new String[]{};
+            try {
+                pi = pm.getPackageInfo(getPackageName(), PackageManager.GET_PERMISSIONS);
+                String[] permissions = pi.requestedPermissions;
+                return permissions;
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+                return new String[]{};
+            }
+        }else {
+            return new String[]{Manifest.permission.READ_PHONE_STATE,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE};
         }
     }
 
